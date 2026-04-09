@@ -1,7 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'androidx.navigation.safeargs'
 apply plugin: 'org.jetbrains.dokka'
 
@@ -18,7 +17,7 @@ ext {
     siteUrl = 'https://romellfudi.github.io/VoIpUSSD'
     gitUrl = 'https://github.com/romellfudi/VoIpUSSD.git'
 
-    libraryVersion = '1.2.f'
+    libraryVersion = '1.2.g'
 
     developerId = 'romellfudi'
     developerName = 'Romell Dominguez'
@@ -30,12 +29,13 @@ ext {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion 34
+    buildToolsVersion "34.0.0"
+    namespace "com.romellfudi.ussdlibrary"
 
     defaultConfig {
         minSdkVersion 23
-        targetSdkVersion 30
+        targetSdkVersion 34
         versionCode 1
         versionName libraryVersion
     }
@@ -102,7 +102,4 @@ dependencies {
     testImplementation 'org.powermock:powermock-api-mockito:1.6.2'
     testImplementation 'io.mockk:mockk:1.9.3'
 }
-
-apply from: 'https://raw.githubusercontent.com/romellfudi/assets/bintray/artifactory_bintray.gradle'
-apply from: 'https://raw.githubusercontent.com/romellfudi/assets/bintray/artifactory_install.gradle'
 

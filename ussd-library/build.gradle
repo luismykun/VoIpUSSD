@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'org.jetbrains.dokka'
 
 ext {
@@ -15,7 +14,7 @@ ext {
     siteUrl = 'https://romellfudi.github.io/VoIpUSSDSample'
     gitUrl = 'https://romellfudi.github.io/VoIpUSSDSample.git'
 
-    libraryVersion = '1.2.f'
+    libraryVersion = '1.2.g'
 
     developerId = 'romellfudi'
     developerName = 'Romell Dominguez'
@@ -27,12 +26,13 @@ ext {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion 34
+    buildToolsVersion "34.0.0"
+    namespace "com.romellfudi.ussdlibrary"
 
     defaultConfig {
         minSdkVersion 23
-        targetSdkVersion 30
+        targetSdkVersion 34
         versionCode 1
         versionName libraryVersion
     }
@@ -84,6 +84,3 @@ dependencies {
     testImplementation 'org.powermock:powermock-module-junit4:1.6.2'
     testImplementation 'org.powermock:powermock-api-mockito:1.6.2'
 }
-
-apply from: 'https://raw.githubusercontent.com/romellfudi/assets/bintray/artifactory_bintray.gradle'
-apply from: 'https://raw.githubusercontent.com/romellfudi/assets/bintray/artifactory_install.gradle'
